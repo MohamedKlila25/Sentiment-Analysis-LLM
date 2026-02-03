@@ -43,31 +43,30 @@ Ce projet académique explore différentes approches pour la **classification de
 
 ## 🏗️ Architecture du Projet
 
-Le projet est structuré en 7 questions principales (Q0-Q7), chacune explorant une approche différente :
 
 ```
-Q0: Prétraitement et exploration des données
+ Prétraitement et exploration des données
     ├── Nettoyage et tokenization
     ├── Vectorisation TF-IDF
     └── Feature engineering
     
-Q1: Modèles classiques de ML
+ Modèles classiques de ML
     ├── LinearSVC
     ├── Logistic Regression
     ├── Multinomial Naive Bayes
     └── Random Forest
     
-Q2: Réseaux de neurones (MLP)
+Réseaux de neurones (MLP)
     ├── MLP sur TF-IDF
     └── MLP sur embeddings BERT
     
-Q3: Analyse comparative
+ Analyse comparative
 
-Q4: LLM pré-entraîné (DistilBERT)
+ LLM pré-entraîné (DistilBERT)
 
-Q5-Q6: Analyse BERT et embeddings
+ Analyse BERT et embeddings
 
-Q7: Fine-tuning avec LoRA
+ Fine-tuning avec LoRA
     ├── RoBERTa-base + LoRA
     ├── BERT-base + LoRA
     ├── DistilBERT + LoRA
@@ -76,7 +75,7 @@ Q7: Fine-tuning avec LoRA
 
 ##  Approches et Modèles
 
-### 1. Machine Learning Classique (Q1)
+### 1. Machine Learning Classique
 
 Vectorisation TF-IDF + modèles traditionnels :
 
@@ -127,7 +126,7 @@ Weights: RoBERTa (0.50) + BERT (0.35) + DistilBERT (0.15)
 - **F1-Score**: 0.8069 ( 1.21% vs meilleur modèle individuel)
 - **Accuracy**: 80.67%
 
-## 📈 Résultats
+##  Résultats
 
 ### Comparaison Finale
 
@@ -199,7 +198,7 @@ tqdm>=4.65.0
 kagglehub
 ```
 
-## 💻 Utilisation
+##  Utilisation
 
 ### 1. Télécharger le dataset
 
@@ -219,11 +218,11 @@ jupyter notebook Sentiment_Analysis_LLM_Embeddings_Groupe10.ipynb
 
 Le notebook est organisé séquentiellement. Exécutez les cellules dans l'ordre pour :
 
-1. **Q0**: Prétraiter les données
-2. **Q1**: Entraîner les modèles classiques
-3. **Q2**: Tester les MLPs
-4. **Q7**: Fine-tuner les LLMs avec LoRA
-5. **Q7 (fin)**: Créer l'ensemble et évaluer
+1.  Prétraiter les données
+2.  Entraîner les modèles classiques
+3.  Tester les MLPs
+4.  Fine-tuner les LLMs avec LoRA
+5.  Créer l'ensemble et évaluer
 
 ### 4. Prédiction sur un nouveau texte
 
@@ -327,10 +326,10 @@ def ensemble_prediction(text, models, tokenizers, weights):
 
 ### Avantages de LoRA
 
-- ✅ **Efficacité mémoire**: <1% des paramètres à entraîner
-- ✅ **Rapidité**: Fine-tuning 3-5x plus rapide
-- ✅ **Performances**: Résultats comparables au fine-tuning complet
-- ✅ **Flexibilité**: Plusieurs adaptateurs pour différentes tâches
+- **Efficacité mémoire**: <1% des paramètres à entraîner
+- **Rapidité**: Fine-tuning 3-5x plus rapide
+- **Performances**: Résultats comparables au fine-tuning complet
+- **Flexibilité**: Plusieurs adaptateurs pour différentes tâches
 
 ##  Analyses Complémentaires
 
@@ -390,10 +389,7 @@ Réel Neg   450   78   22
 - **Kaggle** pour le dataset
 - **Communauté PyTorch** pour les ressources éducatives
 
-##  Contact
-
----
-
+  
 ⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile !
 
-**Développé avec ❤️ par le Groupe 10**
+
