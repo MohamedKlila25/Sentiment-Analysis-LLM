@@ -5,7 +5,6 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![Transformers](https://img.shields.io/badge/🤗-Transformers-yellow.svg)](https://huggingface.co/transformers/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## 📋 Table des Matières
 
@@ -75,7 +74,7 @@ Q7: Fine-tuning avec LoRA
     └── Ensemble Voting
 ```
 
-## 🤖 Approches et Modèles
+##  Approches et Modèles
 
 ### 1. Machine Learning Classique (Q1)
 
@@ -90,7 +89,6 @@ Vectorisation TF-IDF + modèles traditionnels :
 
 **Meilleur modèle classique**: Logistic Regression
 
-### 2. Multi-Layer Perceptron (Q2)
 
 #### MLP sur TF-IDF
 - **Architecture**: Réseau dense à plusieurs couches
@@ -101,7 +99,7 @@ Vectorisation TF-IDF + modèles traditionnels :
 - **MLP Classifier** (3 couches): 67.23% accuracy
 - **Amélioration**: Les embeddings BERT capturent mieux la sémantique
 
-### 3. Fine-tuning avec LoRA (Q7)
+### 3. Fine-tuning avec LoRA
 
 Utilisation de **LoRA (Low-Rank Adaptation)** pour un fine-tuning efficace :
 
@@ -117,7 +115,7 @@ Utilisation de **LoRA (Low-Rank Adaptation)** pour un fine-tuning efficace :
 - `lora_dropout=0.1`
 - Appliqué sur: `query` et `value` layers
 
-### 4. Ensemble Voting (Q7)
+### 4. Ensemble Voting 
 
 Combinaison pondérée des 3 modèles LLM :
 
@@ -126,7 +124,7 @@ Weights: RoBERTa (0.50) + BERT (0.35) + DistilBERT (0.15)
 ```
 
 **Résultats Ensemble**:
-- **F1-Score**: 0.8069 (⬆️ 1.21% vs meilleur modèle individuel)
+- **F1-Score**: 0.8069 ( 1.21% vs meilleur modèle individuel)
 - **Accuracy**: 80.67%
 
 ## 📈 Résultats
@@ -254,38 +252,7 @@ print(f"Sentiment: {sentiments[sentiment]}")
 print(f"Confiance: {predictions[0][sentiment]:.2%}")
 ```
 
-## 📁 Structure des Fichiers
-
-```
-sentiment-analysis-llm/
-│
-├── Sentiment_Analysis_LLM_Embeddings_Groupe10.ipynb  # Notebook principal
-├── README.md                                          # Ce fichier
-├── requirements.txt                                   # Dépendances Python
-├── LICENSE                                           # Licence du projet
-│
-├── data/                                             # Données (non inclus)
-│   ├── train.csv
-│   ├── test.csv
-│   └── processed/
-│
-├── models/                                           # Modèles sauvegardés
-│   ├── roberta_lora/
-│   ├── bert_lora/
-│   └── distilbert_lora/
-│
-├── results/                                          # Résultats et visualisations
-│   ├── confusion_matrices/
-│   ├── learning_curves/
-│   └── performance_comparison.png
-│
-└── docs/                                             # Documentation supplémentaire
-    ├── Q0_preprocessing.md
-    ├── Q7_lora_finetuning.md
-    └── ensemble_methodology.md
-```
-
-## 🔬 Méthodologie
+##  Méthodologie
 
 ### Prétraitement du Texte
 
@@ -350,7 +317,7 @@ def ensemble_prediction(text, models, tokenizers, weights):
     return np.argmax(ensemble_probs)
 ```
 
-## 🎓 Apprentissages Clés
+##  Apprentissages Clés
 
 ### Pourquoi BERT embeddings > TF-IDF ?
 
@@ -365,7 +332,7 @@ def ensemble_prediction(text, models, tokenizers, weights):
 - ✅ **Performances**: Résultats comparables au fine-tuning complet
 - ✅ **Flexibilité**: Plusieurs adaptateurs pour différentes tâches
 
-## 🔍 Analyses Complémentaires
+##  Analyses Complémentaires
 
 ### Distribution des Classes
 
@@ -391,15 +358,13 @@ Réel Neg   450   78   22
 - Meilleure précision sur les sentiments négatifs et positifs
 - Classe neutre plus difficile (confusions avec pos/neg)
 
-## 👥 Contributeurs
+##  Contributeurs
 
-**Groupe 10**
+- **Mahdi Abid**
+- **Mohamed Amine Chaghal**
+- **Mohamed Klila**
 
-- **Étudiant 1** - Prétraitement et ML classique (Q0-Q1)
-- **Étudiant 2** - MLP et BERT embeddings (Q2, Q5-Q6)
-- **Étudiant 3** - Fine-tuning LoRA et Ensemble (Q7)
-
-## 📚 Références
+##  Références
 
 ### Papers
 
@@ -418,23 +383,14 @@ Réel Neg   450   78   22
 
 - [Sentiment Analysis Dataset - Kaggle](https://www.kaggle.com/datasets/abhi8923shriv/sentiment-analysis-dataset)
 
-## 📝 License
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
-## 🙏 Remerciements
+##  Remerciements
 
 - **Professeurs et encadrants** pour leurs conseils
 - **Hugging Face** pour les modèles pré-entraînés et la bibliothèque Transformers
 - **Kaggle** pour le dataset
 - **Communauté PyTorch** pour les ressources éducatives
 
-## 📧 Contact
-
-Pour toute question concernant ce projet :
-
-- **Email**: groupe10@university.edu
-- **GitHub Issues**: [Créer une issue](https://github.com/votregroupe/sentiment-analysis-llm/issues)
+##  Contact
 
 ---
 
